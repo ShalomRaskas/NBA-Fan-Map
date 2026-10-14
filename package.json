@@ -1,0 +1,28 @@
+{
+  "name": "nba-fan-map",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "vercel-build": "node scripts/init-db.mjs && next build --webpack",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:setup": "node --env-file=.env.local scripts/init-db.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "next": "16.4.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}
